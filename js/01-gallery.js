@@ -1,5 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-console.log(galleryItems);
 
 const galleryContainer = document.querySelector(".gallery");
 const itemsMarkup = createItemsMarkup(galleryItems);
@@ -22,12 +21,13 @@ function createItemsMarkup(items) {
     })
     .join("");
 }
+
 galleryContainer.addEventListener("click", onImageClick);
 
 function onImageClick(evt) {
   evt.preventDefault();
   if (
-    evt.target.nodeName !== IMG &&
+    evt.target.nodeName !== "IMG" &&
     !document.querySelector(".basicLightbox ")
   ) {
     return;
@@ -38,25 +38,12 @@ function onImageClick(evt) {
     <img src="${source} "width="800" height="600">`);
 
   instance.show();
-}
-galleryContainer.addEventListener("keydown", (evt) => {
-  if (evt.code === "escape") {
-    instance.close();
+
+  document.addEventListener("keydown", addKeyboardHandler);
+
+  function addKeyboardHandler(event) {
+    if (event.code === "Escape") {
+      instance.close();
+    }
   }
-});
-
-// const onContainerClick = (e) => {
-//   e.preventDefault();
-
-//   if (e.target.classList.contains("gallery")) {
-//     return;
-//   }
-//   const source = e.target.dataset.source;
-
-//   const instance = basicLightbox.create(`
-//     <img src="${source}"width="800" height="600">`);
-
-//   instance.show();
-// };
-
-// galleryContainerEl.addEventListener("click", onContainerClick);
+}
