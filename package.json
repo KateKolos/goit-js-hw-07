@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "install": "^0.13.0",
+    "npm": "^9.3.1"
+  }
+}
