@@ -46,9 +46,8 @@ function onImageClick(evt) {
 }
 
 let lightbox = new SimpleLightbox(".gallery a", {
-  //   captionDelay: 300,
   captionsData: "alt",
-  captionDelay: 250,
+  captionDelay: 100,
   captionType: "alt",
 });
 
