@@ -1,0 +1,22 @@
+{
+  "name": "goit-js-hw-07",
+  "version": "1.0.0",
+  "description": "Файл gallery-items.js містить масив galleryItems, який містить об'єкти з інформацією про зображення: маленьке (прев`ю), оригінальне (велике) і опис. Ми вже підключили його до кожного з JS-файлів проекту.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateKolos/goit-js-hw-07.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KateKolos/goit-js-hw-07/issues"
+  },
+  "homepage": "https://github.com/KateKolos/goit-js-hw-07#readme",
+  "dependencies": {
+    "basiclightbox": "^5.0.4"
+  }
+}
